@@ -1,0 +1,11 @@
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\bin\Debug\SQLAuto.exe.config
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\bin\Debug\SQLAuto.exe
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\bin\Debug\SQLAuto.pdb
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.csprojAssemblyReference.cache
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.Properties.Resources.resources
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.csproj.GenerateResource.cache
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.csproj.CoreCompileInputs.cache
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.exe
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.pdb
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.frmSQLAutomation.resources
+C:\Users\josea\source\repos\SQLScriptAutomation\SQLAuto\obj\Debug\SQLAuto.frmViewSQLScript.resources
