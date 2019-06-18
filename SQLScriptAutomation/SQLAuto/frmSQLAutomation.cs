@@ -14,11 +14,13 @@ namespace SQLAuto
     public partial class frmSQLAutomation : Form
     {
         string _rootFolderPath = string.Empty;
-        public string RootFolderPath { get => _rootFolderPath;}
 
         public frmSQLAutomation()
         {
             InitializeComponent();
+
+            txtServerAndInstance.Text = "Server\\instanceName";
+            txtServerAndInstance.ForeColor = Color.Gray;
         }
 
         private void BtnSearchPath_Click(object sender, EventArgs e)
@@ -40,15 +42,50 @@ namespace SQLAuto
 
         private void BtnExecute_Click(object sender, EventArgs e)
         {
-          
-            var ScriptsFound = Directory.GetFiles(_rootFolderPath, "*.sql", SearchOption.AllDirectories);
-
-            frmViewSQLScript frmViewScripts = new frmViewSQLScript(ScriptsFound);
-            frmViewScripts.ShowDialog();
-
-
+            if (txtRootPath.Text == String.Empty)
+            {
+                txtRootPath.BackColor = System.Drawing.Color.Red;
+            }else if (txtServerAndInstance.Text == "Server\\instanceName")
+            {
+                txtServerAndInstance.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                try
+                {
+                    var ScriptsFound = Directory.GetFiles(_rootFolderPath, "*.sql", SearchOption.AllDirectories);
+                    frmViewSQLScript frmViewScripts = new frmViewSQLScript(ScriptsFound, txtServerAndInstance.Text);
+                    frmViewScripts.ShowDialog();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unable to find Directory.");
+                }
                
- 
+            }
+            
+        }
+        private void txtServerAndInstance_Enter(object sender, EventArgs e)
+        {
+            txtServerAndInstance.BackColor = default;
+            if (txtServerAndInstance.Text == "Server\\instanceName")
+            {
+                txtServerAndInstance.Text = "";
+                txtServerAndInstance.ForeColor = default;
+            }
+        }
+
+        private void txtServerAndInstance_Leave(object sender, EventArgs e)
+        {
+            if (txtServerAndInstance.Text == "")
+            {
+                txtServerAndInstance.Text = "Server\\instanceName";
+                txtServerAndInstance.ForeColor = Color.Gray;
+            }
+        }
+        private void txtRootPath_Enter (object sender, EventArgs e)
+        {
+            txtRootPath.BackColor = default;
         }
     }
 }

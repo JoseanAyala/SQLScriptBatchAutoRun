@@ -32,7 +32,7 @@
             this.dgvSQLFiles = new System.Windows.Forms.DataGridView();
             this.btnAbort = new System.Windows.Forms.Button();
             this.btnRunScripts = new System.Windows.Forms.Button();
-            this.SQLScripts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScriptPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IncludeInBatch = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSQLFiles)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSQLFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSQLFiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SQLScripts,
+            this.ScriptPath,
             this.IncludeInBatch});
             this.dgvSQLFiles.Location = new System.Drawing.Point(12, 12);
             this.dgvSQLFiles.Name = "dgvSQLFiles";
@@ -75,13 +75,14 @@
             this.btnRunScripts.TabIndex = 2;
             this.btnRunScripts.Text = "Run Scripts";
             this.btnRunScripts.UseVisualStyleBackColor = true;
+            this.btnRunScripts.Click += new System.EventHandler(this.BtnRunScripts_Click);
             // 
-            // SQLScripts
+            // ScriptPath
             // 
-            this.SQLScripts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SQLScripts.HeaderText = "Script";
-            this.SQLScripts.Name = "SQLScripts";
-            this.SQLScripts.ReadOnly = true;
+            this.ScriptPath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ScriptPath.HeaderText = "Script Path";
+            this.ScriptPath.Name = "ScriptPath";
+            this.ScriptPath.ReadOnly = true;
             // 
             // IncludeInBatch
             // 
@@ -112,7 +113,7 @@
         private System.Windows.Forms.DataGridView dgvSQLFiles;
         private System.Windows.Forms.Button btnAbort;
         private System.Windows.Forms.Button btnRunScripts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SQLScripts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScriptPath;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IncludeInBatch;
     }
 }
